@@ -56,7 +56,7 @@ const NewpostPage: FC = () => {
       })
       .then(() => {
         clearInputs();
-        router.push("/1");
+        router.push("/blog/1");
         setLoading(false);
       })
       .catch((e) => setLoading(false));

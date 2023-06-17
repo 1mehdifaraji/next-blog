@@ -159,9 +159,9 @@ const Homepage: FC<any> = ({ blogPosts, page }) => {
 
       <Pagination
         currentPage={page}
-        handleNextPage={() => router.push(`/${Number(page) + 1}`)}
+        handleNextPage={() => router.push(`/blog/${Number(page) + 1}`)}
         handlePrevPage={() => {
-          if (Number(page) !== 1) router.push(`/${Number(page) - 1}`);
+          if (Number(page) !== 1) router.push(`/blog/${Number(page) - 1}`);
         }}
       />
     </Layout>

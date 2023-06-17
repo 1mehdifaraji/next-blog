@@ -1,7 +1,8 @@
 {
-  "name": "next-13-ts",
+  "name": "next-blog",
   "version": "0.1.0",
   "private": true,
+  "author": "Mehdi Faraji <mahdifarajideveloper@gmail.com>",
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
