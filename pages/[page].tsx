@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import axios from "axios";
 import { GetStaticPaths, GetStaticProps } from "next";
 
@@ -38,6 +38,22 @@ const Homepage: FC<any> = ({ blogPosts, page }) => {
         console.log(e);
       });
   };
+
+  const handleSearch = (): void => {
+    axios
+      .get(`${process.env.URL}/posts?q=${search}&_limit=${process.env.LIMIT}`)
+      .then(({ data }) => setSearchedBlogPosts(data))
+      .catch((e) => console.log(e));
+  };
+
+  useEffect(() => {
+    if (search === "") setSearching(false);
+    else {
+      setSearching(true);
+      handleSearch();
+    }
+    // eslint-disable-next-line
+  }, [search]);
 
   return (
     <Layout title={page}>

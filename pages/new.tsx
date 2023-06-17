@@ -24,8 +24,6 @@ const NewpostPage: FC = () => {
   const [tag, setTag] = useState<string>("");
   const [tags, setTags] = useState<string[]>([]);
 
-  const goBack = (): void => router.back();
-
   const createTag = (): void => {
     setTags((prev) => [...prev, tag]);
     setTag("");
@@ -46,7 +44,7 @@ const NewpostPage: FC = () => {
   const submitPost = (): void => {
     setLoading(true);
     axios
-      .post(`${process.env.REACT_APP_URL}/posts`, {
+      .post(`${process.env.URL}/posts`, {
         id: uuid(),
         title,
         text: desc,
@@ -54,11 +52,11 @@ const NewpostPage: FC = () => {
         likes: 0,
         tags,
         publishDate: new Date(),
-        userId: process.env.REACT_APP_USERID,
+        userId: process.env.USERID,
       })
       .then(() => {
         clearInputs();
-        router.back();
+        router.push("/1");
         setLoading(false);
       })
       .catch((e) => setLoading(false));
