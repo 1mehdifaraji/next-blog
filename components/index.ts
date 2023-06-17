@@ -11,6 +11,7 @@ export { default as Back } from "components/common/Back";
 export { default as Spinner } from "components/common/Spinner";
 export { default as Error } from "components/common/Error";
 export { default as Textarea } from "components/common/Textarea";
+export { default as Pagination } from "components/common/Pagination";
 
 // Blog
 export { default as BlogHeader } from "components/pages/blog/BlogHeader";

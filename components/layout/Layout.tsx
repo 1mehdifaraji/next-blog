@@ -8,7 +8,8 @@ interface LayoutProps {
   title?: string;
 }
 
-const Layout: FC<LayoutProps> = ({ children, title }) => {
+const Layout: FC<LayoutProps> = ({ children, title: currentTitle }) => {
+  const title = currentTitle;
   return (
     <>
       <Head>

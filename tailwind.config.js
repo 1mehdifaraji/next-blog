@@ -6,50 +6,25 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        fadeIn: "fadeIn 0.6s",
-      },
-      keyframes: () => ({
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
-        },
-      }),
       fontFamily: {
-        light: [
-          "light",
-          "-apple-system",
-          "system-ui",
-          "BlinkMacSystemFont",
-          "Dubai",
-          "Segoe UI",
-          "Tahoma",
-          "Noto Sans Arabic UI",
-          "Dejavu Sans",
-          "Arial",
-          "sans-serif",
-        ],
-        bold: [
-          "bold",
-          "-apple-system",
-          "system-ui",
-          "BlinkMacSystemFont",
-          "Dubai",
-          "Segoe UI",
-          "Tahoma",
-          "Noto Sans Arabic UI",
-          "Dejavu Sans",
-          "Arial",
-          "sans-serif",
-        ],
+        light: ["light", "-apple-system", "system-ui", "sans-serif"],
+        medium: ["medium", "-apple-system", "system-ui", "sans-serif"],
+        bold: ["bold", "-apple-system", "system-ui", "sans-serif"],
       },
       colors: {
-        blurDarkGreen: "#1cd478c2",
+        blue: "#4F73D0",
+        darkBlue: "#224DBA",
+        shadowColor: "rgba(0, 0, 0, 0.08)",
+        gray: "#9D9D9D",
+        lightGray: "#E7E7E7",
+        inputBg: "#FDFDFD",
+        black: "#2D2D2D",
       },
-      backgroundImage: {
-        heroPattern: "url('/dna.webp')",
+      boxShadow: {
+        btn: "0px 3px 4px rgba(0, 0, 0, 0.08)",
+        btnHover: "0px 4px 4px rgba(0, 0, 0, 0.15)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

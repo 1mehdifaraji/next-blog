@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 
 const Back: FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
-  const goBack = (): void => navigate(-1);
+  const goBack = (): void => router.back();
 
   return (
     <button

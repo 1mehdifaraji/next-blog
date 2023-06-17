@@ -1,6 +1,6 @@
 import { FC } from "react";
 import moment from "moment";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { Tag } from "components";
@@ -39,7 +39,7 @@ const Post: FC<PostProps> = ({
       className="border-[1px] border-lightGray rounded p-3 h-[352px] flex flex-col justify-between"
     >
       <div>
-        <Link to={`/post/${id}`}>
+        <Link href={`/post/${id}`}>
           <img
             className="object-cover w-full h-[123px]"
             src={img}
